@@ -1,0 +1,33 @@
+{
+  "animals": [
+    { "id": 1, "name": "Doodles", "breed": "Poodle" },
+    { "id": 2, "name": "Decker", "breed": "German Shepherd" },
+    { "id": 3, "name": "Esme", "breed": "Pitbull" },
+    { "id": 4, "name": "Cormac", "breed": "Lab Mix" },
+    { "id": 5, "name": "Melba", "breed": "Pitbull" }
+  ],
+  "employees": [
+    { "id": 1, "name": "Jack Parsons", "position": "Mr. Manager" },
+    { "id": 2, "name": "Cooper Nichols", "position": "Assistant Manager" },
+    { "id": 3, "name": "Matthew Kroeger", "position": "Canine Therapist" },
+    {
+      "id": 4,
+      "name": "Kürt Krafft",
+      "position": "Kennel Sanitation Specialist, First Class"
+    }
+  ],
+  "locations": [
+    { "id": 1, "name": "Kennel HQ", "address": "Not Available" },
+    {
+      "id": 2,
+      "name": "Kennel - The Nations",
+      "address": "755 N. Canine Blvd, Nashville, TN 37209"
+    }
+  ],
+  "owners": [
+    { "id": 1, "name": "Jack Parsons", "dog": "Cormac", "phoneNumber": "555-705-8408"},
+    { "id": 2, "name": "Holly McKee", "dog": "Melba" , "phoneNumber": "555-306-9401"},
+    { "id": 3, "name": "Matthew Baker", "dog": "Spike", "phoneNumber": "555-867-5309" },
+    { "id": 4, "name": "Joseph Prince", "dog": "Duff", "phoneNumber": "555-606-8400"}
+  ]
+}

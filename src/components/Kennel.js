@@ -1,8 +1,7 @@
-import React, { Component } from "react"
-import NavBar from "./nav/NavBar"
-import ApplicationViews from "./ApplicationViews"
-
-import "./Kennel.css"
+import React, { Component } from "react";
+import NavBar from "./nav/NavBar";
+import ApplicationViews from "./ApplicationViews";
+import "./Kennel.css";
 
 class Kennel extends Component {
   render() {
@@ -11,8 +10,8 @@ class Kennel extends Component {
         <NavBar />
         <ApplicationViews />
       </>
-    )
+    );
   }
 }
 
-export default Kennel
+export default Kennel;

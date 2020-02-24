@@ -1,19 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+// import './Animal.css'
 
-class LocationCard extends Component {
-  render() {
-    return (
-      <div className="card">
-        <div className="card-content">
-          <picture>
-            <img src={require('./location.jpg')} alt="Location" />
-          </picture>
-          <h3>Name: <span className="card-employeename">Kennel HQ</span></h3>
-          <p>Address: Not Available</p>
-        </div>
+const LocationCard = props => {
+  return (
+    <div className="card">
+      <div className="card-content">
+        <h3>Name: <span className="card-locationname">
+          {props.location.name}
+        </span></h3>
+        <p>Address: {props.location.address}</p>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default LocationCard;

@@ -3,9 +3,7 @@ import React, { Component } from "react";
 import Home from "./home/Home";
 import AnimalList from "./animal/AnimalList";
 //only include these once they are built - previous practice exercise
-// import LocationCard from "./location/LocationCard";
 import EmployeeList from "./employee/EmployeeList";
-// import OwnerCard from "./owner/OwnerCard";
 import LocationList from "./location/LocationList";
 import OwnerList from "./owner/OwnerList";
 

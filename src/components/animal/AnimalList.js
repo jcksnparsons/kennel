@@ -7,7 +7,6 @@ const AnimalList = () => {
 
   const getAnimals = () => {
     return AnimalManager.getAll().then(animalsFromAPI => {
-      // We'll do something more interesting with this data soon.
       setAnimals(animalsFromAPI);
     });
   };
@@ -16,11 +15,18 @@ const AnimalList = () => {
     getAnimals();
   }, []);
 
+  const deleteAnimal = id => {
+    AnimalManager.delete(id)
+      .then(() => AnimalManager.getAll().then(setAnimals));
+  };
+
   return (
     <div className="container-cards">
-      {animals.map(animal => (
-        <AnimalCard key={animal.id} animal={animal}/>
-      ))}
+      {animals.map(animal =>
+        <AnimalCard
+          key={animal.id}
+          animal={animal}
+          deleteAnimal={deleteAnimal} />)}
     </div>
   );
 };

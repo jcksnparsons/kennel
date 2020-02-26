@@ -3,17 +3,20 @@
     {
       "id": 4,
       "name": "Cormac",
-      "breed": "Lab Mix"
+      "breed": "Lab Mix",
+      "img": "https://countrylabs.com/wp-content/uploads/2019/06/ben-black-lab.jpg"
     },
     {
       "id": 5,
       "name": "Melba",
-      "breed": "Pitbull"
+      "breed": "Pitbull",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTaYmSJ6tWN77mODG8njbhEuniatqvvt5Ew0Id2J6b29S5wLmKE"
     },
     {
       "id": 6,
       "name": "Batman",
-      "breed": "Cockapoo"
+      "breed": "Cockapoo",
+      "img": "https://cdn.shopify.com/s/files/1/1267/6891/products/DSC_0305_bc36db0c-600f-406e-b9c3-8df697ff0d42.jpg?v=1571297010"
     }
   ],
   "employees": [
@@ -37,7 +40,7 @@
     {
       "id": 1,
       "name": "Kennel HQ",
-      "address": "Not Available"
+      "address": "500 Puppy Way, Nashville, TN 37203"
     }
   ],
   "owners": [

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import OwnerManager from "../../modules/OwnerManager";
 import OwnerCard from "./OwnerCard";
 
-const OwnerList = () => {
+const OwnerList = (props) => {
   const [owners, setOwners] = useState([]);
 
   const getOwners = () => {
@@ -18,16 +18,29 @@ const OwnerList = () => {
 
   const deleteOwner = id => {
     OwnerManager.delete(id).then(() => {
-      OwnerManager.getAll().then(setOwners)
-    })
-  }
+      OwnerManager.getAll().then(setOwners);
+    });
+  };
 
   return (
-    <div className="container-cards">
-      {owners.map(owner => (
-        <OwnerCard key={owner.id} owner={owner} deleteOwner={deleteOwner}/>
-      ))}
-    </div>
+    <>
+      <section className="section-content">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            props.history.push("/owners/new");
+          }}
+        >
+          New Owner
+        </button>
+      </section>
+      <div className="container-cards">
+        {owners.map(owner => (
+          <OwnerCard key={owner.id} owner={owner} deleteOwner={deleteOwner} />
+        ))}
+      </div>
+    </>
   );
 };
 

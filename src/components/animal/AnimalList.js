@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AnimalManager from "../../modules/AnimalManager";
 import AnimalCard from "./AnimalCard";
 
-const AnimalList = () => {
+const AnimalList = (props) => {
   const [animals, setAnimals] = useState([]);
 
   const getAnimals = () => {
@@ -16,18 +16,34 @@ const AnimalList = () => {
   }, []);
 
   const deleteAnimal = id => {
-    AnimalManager.delete(id)
-      .then(() => AnimalManager.getAll().then(setAnimals));
+    AnimalManager.delete(id).then(() =>
+      AnimalManager.getAll().then(setAnimals)
+    );
   };
 
   return (
-    <div className="container-cards">
-      {animals.map(animal =>
-        <AnimalCard
-          key={animal.id}
-          animal={animal}
-          deleteAnimal={deleteAnimal} />)}
-    </div>
+    <React.Fragment>
+      <section className="section-content">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            props.history.push("/animals/new");
+          }}
+        >
+          Admit Animal
+        </button>
+      </section>
+      <div className="container-cards">
+        {animals.map(animal => (
+          <AnimalCard
+            key={animal.id}
+            animal={animal}
+            deleteAnimal={deleteAnimal}
+          />
+        ))}
+      </div>
+    </React.Fragment>
   );
 };
 

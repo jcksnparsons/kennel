@@ -17,6 +17,12 @@
       "name": "Batman",
       "breed": "Cockapoo",
       "img": "https://cdn.shopify.com/s/files/1/1267/6891/products/DSC_0305_bc36db0c-600f-406e-b9c3-8df697ff0d42.jpg?v=1571297010"
+    },
+    {
+      "name": "Doge",
+      "breed": "Shiba Inu",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/81-yKbVND-L._SY355_.png",
+      "id": 7
     }
   ],
   "employees": [
@@ -41,6 +47,21 @@
       "id": 1,
       "name": "Kennel HQ",
       "address": "500 Puppy Way, Nashville, TN 37203"
+    },
+    {
+      "id": 2,
+      "name": "Kennel East",
+      "address": "323 McFerrin Ave., Nashville, TN 37206"
+    },
+    {
+      "id": 3,
+      "name": "Fortress of Solitude",
+      "address": "1 Krypton Blvd., North Pole 00010"
+    },
+    {
+      "name": "Kennel NSS",
+      "address": "301 Plus Park Blvd.",
+      "id": 4
     }
   ],
   "owners": [

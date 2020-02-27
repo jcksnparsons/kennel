@@ -10,6 +10,7 @@
   
   .card-content {
     padding: .5em;
+    height: 100%;
   }
   
   .card-content h3 {

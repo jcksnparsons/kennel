@@ -2,12 +2,15 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import Home from "./home/Home";
 import AnimalList from "./animal/AnimalList";
-//only include these once they are built - previous practice exercise
+import AnimalDetail from "./animal/AnimalDetail";
+import AnimalForm from "./animal/AnimalForm";
 import EmployeeList from "./employee/EmployeeList";
 import LocationList from "./location/LocationList";
-import OwnerList from "./owner/OwnerList";
-import AnimalDetail from "./animal/AnimalDetail";
 import LocationDetail from "./location/LocationDetail";
+import OwnerList from "./owner/OwnerList";
+
+
+
 
 class ApplicationViews extends Component {
   render() {
@@ -25,7 +28,13 @@ class ApplicationViews extends Component {
           exact
           path="/animals"
           render={props => {
-            return <AnimalList />;
+            return <AnimalList {...props} />;
+          }}
+        />
+         <Route
+          path="/animals/new"
+          render={props => {
+            return <AnimalForm {...props} />;
           }}
         />
         <Route

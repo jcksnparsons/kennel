@@ -25,6 +25,7 @@ const LocationList = () => {
   return (
     <div className="container-cards">
       {locations.map(location => (
+        // prepare for pain on the location prop, according to Bryan
         <LocationCard key={location.id} location={location} deleteLocation={deleteLocation} />
       ))}
     </div>

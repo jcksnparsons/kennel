@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import EmployeeManager from "../../modules/EmployeeManager";
 import EmployeeCard from "./EmployeeCard";
 
-const EmployeeList = () => {
+const EmployeeList = (props) => {
   const [employees, setEmployees] = useState([]);
 
   const getEmployees = () => {
@@ -23,11 +23,28 @@ const EmployeeList = () => {
   };
 
   return (
-    <div className="container-cards">
-      {employees.map(employee => (
-        <EmployeeCard key={employee.id} employee={employee} deleteEmployee={deleteEmployee} />
-      ))}
-    </div>
+    <React.Fragment>
+      <section className="section-content">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            props.history.push("/employees/new");
+          }}
+        >
+          Hire Employee
+        </button>
+      </section>
+      <div className="container-cards">
+        {employees.map(employee => (
+          <EmployeeCard
+            key={employee.id}
+            employee={employee}
+            deleteEmployee={deleteEmployee}
+          />
+        ))}
+      </div>
+    </React.Fragment>
   );
 };
 

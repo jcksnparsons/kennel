@@ -7,6 +7,15 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/owners`).then(result => result.json())
   },
+  post(newOwner) {
+    return fetch(`${remoteURL}/owners`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newOwner)
+    }).then(data => data.json());
+  },
   delete(id) {
     return fetch(`${remoteURL}/owners/${id}`, {
       method: "DELETE"

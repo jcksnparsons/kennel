@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import LocationManager from "../../modules/LocationManager";
 import LocationCard from "./LocationCard";
 
-const LocationList = () => {
+const LocationList = (props) => {
   const [locations, setLocations] = useState([]);
 
   const getLocations = () => {
@@ -23,12 +23,25 @@ const LocationList = () => {
   };
 
   return (
+    <>
+    <section className="section-content">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            props.history.push("/locations/new");
+          }}
+        >
+          Add Location
+        </button>
+      </section>
     <div className="container-cards">
       {locations.map(location => (
         // prepare for pain on the location prop, according to Bryan
         <LocationCard key={location.id} location={location} deleteLocation={deleteLocation} />
       ))}
     </div>
+    </>
   );
 };
 

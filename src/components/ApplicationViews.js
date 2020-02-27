@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 import Home from "./home/Home";
 import AnimalList from "./animal/AnimalList";
@@ -11,11 +11,16 @@ import LocationDetail from "./location/LocationDetail";
 import LocationForm from "./location/LocationForm";
 import OwnerList from "./owner/OwnerList";
 import OwnerForm from "./owner/OwnerForm";
+import Login from "./auth/Login";
 
 class ApplicationViews extends Component {
   render() {
+    const isAuthenticated = () =>
+      sessionStorage.getItem("credentials") !== null;
+
     return (
       <React.Fragment>
+        <Route path="/login" component={Login} />
         <Route
           exact
           path="/"
@@ -28,7 +33,11 @@ class ApplicationViews extends Component {
           exact
           path="/animals"
           render={props => {
-            return <AnimalList {...props} />;
+            if (isAuthenticated()) {
+              return <AnimalList {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
           }}
         />
         <Route
@@ -53,7 +62,11 @@ class ApplicationViews extends Component {
           exact
           path="/employees"
           render={props => {
-            return <EmployeeList {...props} />;
+            if (isAuthenticated()) {
+              return <EmployeeList {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
           }}
         />
         <Route
@@ -66,7 +79,11 @@ class ApplicationViews extends Component {
           exact
           path="/locations"
           render={props => {
+            if (isAuthenticated()) {
             return <LocationList {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
           }}
         />
         <Route
@@ -91,7 +108,11 @@ class ApplicationViews extends Component {
           exact
           path="/owners"
           render={props => {
+            if (isAuthenticated()) {
             return <OwnerList {...props} />;
+            } else {
+              return <Redirect to="/login" />
+            }
           }}
         />
         <Route

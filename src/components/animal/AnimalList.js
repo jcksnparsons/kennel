@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AnimalManager from "../../modules/AnimalManager";
 import AnimalCard from "./AnimalCard";
 
-const AnimalList = (props) => {
+const AnimalList = props => {
   const [animals, setAnimals] = useState([]);
 
   const getAnimals = () => {
@@ -40,6 +40,7 @@ const AnimalList = (props) => {
             key={animal.id}
             animal={animal}
             deleteAnimal={deleteAnimal}
+            {...props}
           />
         ))}
       </div>

@@ -7,10 +7,11 @@ import AnimalForm from "./animal/AnimalForm";
 import AnimalEditForm from "./animal/AnimalEditForm";
 import EmployeeList from "./employee/EmployeeList";
 import EmployeeForm from "./employee/EmployeeForm";
-import EmployeeEditForm from "./employee/EmployeeEditForm"
+import EmployeeEditForm from "./employee/EmployeeEditForm";
 import LocationList from "./location/LocationList";
 import LocationDetail from "./location/LocationDetail";
 import LocationForm from "./location/LocationForm";
+import LocationEditForm from "./location/LocationEditForm";
 import OwnerList from "./owner/OwnerList";
 import OwnerForm from "./owner/OwnerForm";
 import OwnerEditForm from "./owner/OwnerEditForm";
@@ -120,6 +121,7 @@ class ApplicationViews extends Component {
           }}
         />
         <Route
+          exact
           path="/locations/:locationId(\d+)"
           render={props => {
             // Pass the locationId to the LocationDetailComponent
@@ -144,6 +146,16 @@ class ApplicationViews extends Component {
               return <Redirect to="/login" />;
             }
           }}
+        />
+        <Route
+          path="/locations/:locationId(\d+)/edit"
+          render={props =>
+            isAuthenticated() ? (
+              <LocationEditForm {...props} />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
         />
         <Route
           exact

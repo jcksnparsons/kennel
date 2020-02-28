@@ -13,6 +13,7 @@ import LocationDetail from "./location/LocationDetail";
 import LocationForm from "./location/LocationForm";
 import OwnerList from "./owner/OwnerList";
 import OwnerForm from "./owner/OwnerForm";
+import OwnerEditForm from "./owner/OwnerEditForm";
 import Login from "./auth/Login";
 
 class ApplicationViews extends Component {
@@ -164,6 +165,16 @@ class ApplicationViews extends Component {
               return <Redirect to="/login" />;
             }
           }}
+        />
+        <Route
+          path="/owners/:ownerId(\d+)/edit"
+          render={props =>
+            isAuthenticated() ? (
+              <OwnerEditForm {...props} />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
         />
       </React.Fragment>
     );

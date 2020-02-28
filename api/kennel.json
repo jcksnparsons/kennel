@@ -39,7 +39,7 @@
     {
       "id": 3,
       "name": "Matthew Kroeger",
-      "position": "Canine Therapist"
+      "position": "Senior Canine Therapist"
     }
   ],
   "locations": [
@@ -63,8 +63,7 @@
     {
       "id": 1,
       "name": "Jack Parsons",
-      "dog": "Cormac",
-      "phoneNumber": "555-705-8408"
+      "dog": "Cormac and Melba"
     },
     {
       "id": 2,

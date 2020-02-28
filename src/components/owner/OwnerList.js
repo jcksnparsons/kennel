@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import OwnerManager from "../../modules/OwnerManager";
 import OwnerCard from "./OwnerCard";
 
-const OwnerList = (props) => {
+const OwnerList = props => {
   const [owners, setOwners] = useState([]);
 
   const getOwners = () => {
@@ -37,7 +37,12 @@ const OwnerList = (props) => {
       </section>
       <div className="container-cards">
         {owners.map(owner => (
-          <OwnerCard key={owner.id} owner={owner} deleteOwner={deleteOwner} />
+          <OwnerCard
+            key={owner.id}
+            owner={owner}
+            deleteOwner={deleteOwner}
+            {...props}
+          />
         ))}
       </div>
     </>

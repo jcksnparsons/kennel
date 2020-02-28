@@ -10,6 +10,12 @@ const OwnerCard = props => {
         </h3>
         <p>Phone Number: {props.owner.phoneNumber}</p>
         <p>Pet: {props.owner.dog}</p>
+        <button
+          type="button"
+          onClick={() => props.history.push(`/owners/${props.owner.id}/edit`)}
+        >
+          Edit
+        </button>
         <button type="button" onClick={() => props.deleteOwner(props.owner.id)}>
           Close Account
         </button>

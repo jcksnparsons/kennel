@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import LocationManager from "../../modules/LocationManager";
 import LocationCard from "./LocationCard";
 
-const LocationList = (props) => {
+const LocationList = props => {
   const [locations, setLocations] = useState([]);
 
   const getLocations = () => {
@@ -24,7 +24,7 @@ const LocationList = (props) => {
 
   return (
     <>
-    <section className="section-content">
+      <section className="section-content">
         <button
           type="button"
           className="btn"
@@ -35,12 +35,17 @@ const LocationList = (props) => {
           Add Location
         </button>
       </section>
-    <div className="container-cards">
-      {locations.map(location => (
-        // prepare for pain on the location prop, according to Bryan
-        <LocationCard key={location.id} location={location} deleteLocation={deleteLocation} />
-      ))}
-    </div>
+      <div className="container-cards">
+        {locations.map(kennelLocation => (
+          // prepare for pain on the location prop, according to Bryan
+          <LocationCard
+            key={kennelLocation.id}
+            kennelLocation={kennelLocation}
+            deleteLocation={deleteLocation}
+            {...props}
+          />
+        ))}
+      </div>
     </>
   );
 };

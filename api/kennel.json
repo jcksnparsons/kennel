@@ -1,20 +1,14 @@
 {
   "animals": [
     {
-      "id": 4,
-      "name": "Cormac",
-      "breed": "Lab Mix",
-      "img": "https://countrylabs.com/wp-content/uploads/2019/06/ben-black-lab.jpg"
-    },
-    {
       "id": 5,
-      "name": "Melba",
+      "name": "Ms. Melba",
       "breed": "Pitbull",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTaYmSJ6tWN77mODG8njbhEuniatqvvt5Ew0Id2J6b29S5wLmKE"
     },
     {
       "id": 6,
-      "name": "Batman",
+      "name": "The Batman",
       "breed": "Cockapoo",
       "img": "https://cdn.shopify.com/s/files/1/1267/6891/products/DSC_0305_bc36db0c-600f-406e-b9c3-8df697ff0d42.jpg?v=1571297010"
     },
@@ -23,6 +17,12 @@
       "breed": "Shiba Inu",
       "img": "https://images-na.ssl-images-amazon.com/images/I/81-yKbVND-L._SY355_.png",
       "id": 7
+    },
+    {
+      "name": "Cormac aka \"Big Mac\"",
+      "breed": "Black Lab",
+      "img": "https://i.pinimg.com/originals/29/0c/19/290c192b887d0419bf8d686290bcb01b.jpg",
+      "id": 8
     }
   ],
   "employees": [
@@ -34,12 +34,12 @@
     {
       "id": 2,
       "name": "Cooper Nichols",
-      "position": "Assistant Manager"
+      "position": "Assistant to the Manager"
     },
     {
       "id": 3,
       "name": "Matthew Kroeger",
-      "position": "Canine Therapist"
+      "position": "Senior Canine Therapist"
     }
   ],
   "locations": [
@@ -50,26 +50,20 @@
     },
     {
       "id": 2,
-      "name": "Kennel East",
+      "name": "Kennel Eastside",
       "address": "323 McFerrin Ave., Nashville, TN 37206"
     },
     {
       "id": 3,
       "name": "Fortress of Solitude",
       "address": "1 Krypton Blvd., North Pole 00010"
-    },
-    {
-      "name": "Kennel NSS",
-      "address": "301 Plus Park Blvd.",
-      "id": 4
     }
   ],
   "owners": [
     {
       "id": 1,
       "name": "Jack Parsons",
-      "dog": "Cormac",
-      "phoneNumber": "555-705-8408"
+      "dog": "Cormac and Melba"
     },
     {
       "id": 2,

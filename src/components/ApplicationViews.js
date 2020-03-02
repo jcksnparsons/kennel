@@ -6,6 +6,7 @@ import AnimalDetail from "./animal/AnimalDetail";
 import AnimalForm from "./animal/AnimalForm";
 import AnimalEditForm from "./animal/AnimalEditForm";
 import EmployeeList from "./employee/EmployeeList";
+import EmployeeWithAnimals from "./employee/EmployeeWithAnimals"
 import EmployeeForm from "./employee/EmployeeForm";
 import EmployeeEditForm from "./employee/EmployeeEditForm";
 import LocationList from "./location/LocationList";
@@ -100,6 +101,12 @@ class ApplicationViews extends Component {
           }
         />
         <Route
+          path="/employees/:employeeId(\d+)/details"
+          render={props => {
+            return <EmployeeWithAnimals {...props} />;
+          }}
+        />
+        <Route
           path="/employees/:employeeId(\d+)/edit"
           render={props =>
             isAuthenticated() ? (
@@ -137,12 +144,12 @@ class ApplicationViews extends Component {
         />
         <Route
           path="/locations/new"
-          render={props => 
+          render={props =>
             isAuthenticated() ? (
               <LocationForm {...props} />
-             ) : (
+            ) : (
               <Redirect to="/login" />
-             )
+            )
           }
         />
         <Route
@@ -158,22 +165,22 @@ class ApplicationViews extends Component {
         <Route
           exact
           path="/owners"
-          render={props => 
+          render={props =>
             isAuthenticated() ? (
               <OwnerList {...props} />
-             ) : (
+            ) : (
               <Redirect to="/login" />
-             )
+            )
           }
         />
         <Route
           path="/owners/new"
-          render={props => 
+          render={props =>
             isAuthenticated() ? (
               <OwnerForm {...props} />
-             ) : (
+            ) : (
               <Redirect to="/login" />
-             )
+            )
           }
         />
         <Route

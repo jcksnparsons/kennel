@@ -4,19 +4,22 @@
       "id": 5,
       "name": "Ms. Melba",
       "breed": "Pitbull",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTaYmSJ6tWN77mODG8njbhEuniatqvvt5Ew0Id2J6b29S5wLmKE"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTaYmSJ6tWN77mODG8njbhEuniatqvvt5Ew0Id2J6b29S5wLmKE",
+      "employeeId": 3
     },
     {
       "id": 6,
-      "name": "The Batman",
+      "name": "Batman",
       "breed": "Cockapoo",
-      "img": "https://cdn.shopify.com/s/files/1/1267/6891/products/DSC_0305_bc36db0c-600f-406e-b9c3-8df697ff0d42.jpg?v=1571297010"
+      "img": "https://cdn.shopify.com/s/files/1/1267/6891/products/DSC_0305_bc36db0c-600f-406e-b9c3-8df697ff0d42.jpg?v=1571297010",
+      "employeeId": 4
     },
     {
+      "id": 7,
       "name": "Cormac aka \"Big Mac\"",
-      "breed": "Black Lab",
-      "img": "https://i.pinimg.com/originals/29/0c/19/290c192b887d0419bf8d686290bcb01b.jpg",
-      "id": 8
+      "breed": "Lab Mix",
+      "img": "https://i.pinimg.com/originals/7c/8a/ed/7c8aeda56e378273046d1fb0b1126f40.jpg",
+      "employeeId": 1
     }
   ],
   "employees": [
@@ -34,6 +37,26 @@
       "id": 3,
       "name": "Matthew Kroeger",
       "position": "Senior Canine Therapist"
+    },
+    {
+      "name": "Keith Potempa",
+      "position": "Dog Wrangler",
+      "id": 4
+    },
+    {
+      "name": "Katie Wohl",
+      "position": "Dog Wrangler",
+      "id": 5
+    },
+    {
+      "name": "Sophia Candiani",
+      "position": "Dog Wrangler",
+      "id": 6
+    },
+    {
+      "name": "Cody Murdock",
+      "position": "Dog Wrangler",
+      "id": 7
     }
   ],
   "locations": [

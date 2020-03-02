@@ -26,37 +26,44 @@
     {
       "id": 1,
       "name": "Jack Parsons",
-      "position": "Mr. Manager"
+      "position": "Mr. Manager",
+      "locationId": 3
     },
     {
       "id": 2,
       "name": "Cooper Nichols",
-      "position": "Assistant to the Manager"
+      "position": "Assistant to the Manager",
+      "locationId": 2
     },
     {
       "id": 3,
       "name": "Matthew Kroeger",
-      "position": "Senior Canine Therapist"
+      "position": "Senior Canine Therapist",
+      "locationId": 2
     },
     {
       "name": "Keith Potempa",
       "position": "Dog Wrangler",
-      "id": 4
+      "id": 4,
+      "locationId": 2
     },
     {
       "name": "Katie Wohl",
       "position": "Dog Wrangler",
-      "id": 5
+      "id": 5,
+      "locationId": 1
     },
     {
       "name": "Sophia Candiani",
       "position": "Dog Wrangler",
-      "id": 6
+      "id": 6,
+      "locationId": 1
     },
     {
       "name": "Cody Murdock",
       "position": "Dog Wrangler",
-      "id": 7
+      "id": 7,
+      "locationId": 1
     }
   ],
   "locations": [

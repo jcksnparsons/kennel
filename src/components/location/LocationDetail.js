@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import LocationManager from '../../modules/LocationManager';
-import './LocationDetail.css'
+import React, { useState, useEffect } from "react";
+import LocationManager from "../../modules/LocationManager";
+import "./LocationDetail.css";
 
 const LocationDetail = props => {
-  const [location, setLocation] = useState({ name: "", address: "" });
+  const [location, setLocation] = useState({ name: "", address: "", employees: [] });
   const [isLoading, setIsLoading] = useState(true);
 
   const handleDelete = () => {
@@ -16,27 +16,35 @@ const LocationDetail = props => {
 
   useEffect(() => {
     //get(id) from LocationManager and hang on to the data; put it into state
-    LocationManager.get(props.locationId)
-      .then(location => {
-        setLocation({
-          name: location.name,
-          address: location.address
-        });
-      setIsLoading(false);
+    LocationManager.getwithEmployees(props.locationId).then(location => {
+      setLocation({
+        name: location.name,
+        address: location.address,
+        employees: location.employees
       });
+      setIsLoading(false);
+    });
   }, [props.locationId]);
 
   return (
     <div className="card">
       <div className="card-content">
-        <h3>Name: <span style={{ color: 'darkslategrey' }}>{location.name}</span></h3>
+        <h3>
+          Name: <span style={{ color: "darkslategrey" }}>{location.name}</span>
+        </h3>
         <p>Address: {location.address}</p>
+        <p>
+          Employees:
+         {location.employees.map(employee => {
+            return <li>{employee.name}</li>;
+          })} 
+        </p>
         <button type="button" disabled={isLoading} onClick={handleDelete}>
           Close Location
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default LocationDetail;

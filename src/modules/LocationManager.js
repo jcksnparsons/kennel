@@ -7,6 +7,9 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/locations`).then(result => result.json())
   },
+  getwithEmployees(id) {
+    return fetch(`${remoteURL}/locations/${id}?_embed=employees`).then(result => result.json())
+  },
   post(newLocation) {
     return fetch(`${remoteURL}/locations`, {
       method: "POST",

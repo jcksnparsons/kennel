@@ -37,7 +37,6 @@ const LocationList = props => {
       </section>
       <div className="container-cards">
         {locations.map(kennelLocation => (
-          // prepare for pain on the location prop, according to Bryan
           <LocationCard
             key={kennelLocation.id}
             kennelLocation={kennelLocation}

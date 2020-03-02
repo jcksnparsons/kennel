@@ -5,7 +5,7 @@ const EmployeeCard = props => {
     <div className="card">
       <div className="card-content">
         <h3>
-          Name: <span className="card-employeename">{props.employee.name}</span>
+          <span className="card-employeename">{props.employee.name}</span>
         </h3>
         <p>Position: {props.employee.position}</p>
         <button

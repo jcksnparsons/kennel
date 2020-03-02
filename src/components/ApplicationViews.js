@@ -81,23 +81,23 @@ class ApplicationViews extends Component {
         <Route
           exact
           path="/employees"
-          render={props => {
-            if (isAuthenticated()) {
-              return <EmployeeList {...props} />;
-            } else {
-              return <Redirect to="/login" />;
-            }
-          }}
+          render={props =>
+            isAuthenticated() ? (
+              <EmployeeList {...props} />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
         />
         <Route
           path="/employees/new"
-          render={props => {
-            if (isAuthenticated()) {
-              return <EmployeeForm {...props} />;
-            } else {
-              return <Redirect to="/login" />;
-            }
-          }}
+          render={props =>
+            isAuthenticated() ? (
+              <EmployeeForm {...props} />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
         />
         <Route
           path="/employees/:employeeId(\d+)/edit"
@@ -112,40 +112,38 @@ class ApplicationViews extends Component {
         <Route
           exact
           path="/locations"
-          render={props => {
-            if (isAuthenticated()) {
-              return <LocationList {...props} />;
-            } else {
-              return <Redirect to="/login" />;
-            }
-          }}
+          render={props =>
+            isAuthenticated() ? (
+              <LocationList {...props} />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
         />
         <Route
           exact
           path="/locations/:locationId(\d+)"
-          render={props => {
+          render={props =>
             // Pass the locationId to the LocationDetailComponent
-            if (isAuthenticated()) {
-              return (
-                <LocationDetail
-                  locationId={parseInt(props.match.params.locationId)}
-                  {...props}
-                />
-              );
-            } else {
-              return <Redirect to="/login" />;
-            }
-          }}
+            isAuthenticated() ? (
+              <LocationDetail
+                locationId={parseInt(props.match.params.locationId)}
+                {...props}
+              />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
         />
         <Route
           path="/locations/new"
-          render={props => {
-            if (isAuthenticated()) {
-              return <LocationForm {...props} />;
-            } else {
-              return <Redirect to="/login" />;
-            }
-          }}
+          render={props => 
+            isAuthenticated() ? (
+              <LocationForm {...props} />
+             ) : (
+              <Redirect to="/login" />
+             )
+          }
         />
         <Route
           path="/locations/:locationId(\d+)/edit"
@@ -160,23 +158,23 @@ class ApplicationViews extends Component {
         <Route
           exact
           path="/owners"
-          render={props => {
-            if (isAuthenticated()) {
-              return <OwnerList {...props} />;
-            } else {
-              return <Redirect to="/login" />;
-            }
-          }}
+          render={props => 
+            isAuthenticated() ? (
+              <OwnerList {...props} />
+             ) : (
+              <Redirect to="/login" />
+             )
+          }
         />
         <Route
           path="/owners/new"
-          render={props => {
-            if (isAuthenticated()) {
-              return <OwnerForm {...props} />;
-            } else {
-              return <Redirect to="/login" />;
-            }
-          }}
+          render={props => 
+            isAuthenticated() ? (
+              <OwnerForm {...props} />
+             ) : (
+              <Redirect to="/login" />
+             )
+          }
         />
         <Route
           path="/owners/:ownerId(\d+)/edit"

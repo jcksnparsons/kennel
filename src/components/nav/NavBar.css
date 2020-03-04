@@ -37,3 +37,23 @@ small {
     color: maroon;
   }
   
+  #logOut {
+    /* background-color: gray;
+    color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px; */
+    max-width: 9em;
+    padding: .5em;
+    margin: .4em auto;
+    background-color: darkblue;
+    border: none;
+    color: cornsilk;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 2px;
+    width: 100%;
+    cursor: pointer;
+  } 

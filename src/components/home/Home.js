@@ -5,6 +5,7 @@ import AnimalManager from "../../modules/AnimalManager";
 const Home = () => {
   const [spotlightId, setSpotlightId] = useState(0);
 
+
   const refreshSpotlightAnimal = () => {
     AnimalManager.getRandomId().then(setSpotlightId);
   };

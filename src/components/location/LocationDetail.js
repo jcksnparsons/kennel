@@ -3,8 +3,13 @@ import LocationManager from "../../modules/LocationManager";
 import "./LocationDetail.css";
 
 const LocationDetail = props => {
-  const [location, setLocation] = useState({ name: "", address: "", employees: [] });
+  const [location, setLocation] = useState({
+    name: "",
+    address: "",
+    employees: []
+  });
   const [isLoading, setIsLoading] = useState(true);
+  const hasUser = props.hasUser;
 
   const handleDelete = () => {
     //invoke the delete function in LocationManager and re-direct to the location list.
@@ -33,15 +38,19 @@ const LocationDetail = props => {
           Name: <span style={{ color: "darkslategrey" }}>{location.name}</span>
         </h3>
         <p>Address: {location.address}</p>
-        <p>
-          Employees:
-         {location.employees.map(employee => {
-            return <li>{employee.name}</li>;
-          })} 
-        </p>
-        <button type="button" disabled={isLoading} onClick={handleDelete}>
-          Close Location
-        </button>
+        {hasUser ? (
+          <p>
+            Employees:
+            {location.employees.map(employee => {
+              return <li>{employee.name}</li>;
+            })}
+          </p>
+        ) : null}
+        {hasUser ? (
+          <button type="button" disabled={isLoading} onClick={handleDelete}>
+            Close Location
+          </button>
+        ) : null}
       </div>
     </div>
   );

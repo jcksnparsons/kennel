@@ -100,7 +100,7 @@ const ApplicationViews = props => {
         exact
         path="/locations"
         render={props =>
-          <LocationList {...props} />
+          <LocationList hasUser={hasUser} {...props} />
         }
       />
       <Route
@@ -110,6 +110,7 @@ const ApplicationViews = props => {
           // Pass the locationId to the LocationDetailComponent
             <LocationDetail
               locationId={parseInt(props.match.params.locationId)}
+              hasUser={hasUser}
               {...props}
             />
         }

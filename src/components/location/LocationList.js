@@ -25,7 +25,8 @@ const LocationList = props => {
   return (
     <>
       <section className="section-content">
-        <button
+        {props.hasUser
+        ? <button
           type="button"
           className="btn"
           onClick={() => {
@@ -34,6 +35,7 @@ const LocationList = props => {
         >
           Add Location
         </button>
+        : null }
       </section>
       <div className="container-cards">
         {locations.map(kennelLocation => (
